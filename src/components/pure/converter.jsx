@@ -1,43 +1,87 @@
 import React, { useState } from 'react';
 
-const options = [
-    { label: "km - miles", value: 1 },
-    { label: "miles - km", value: 2 },
-    { label: "feet - m", value: 3 },
-    { label: "m - Feet", value: 4 },
-    { label: "cm - inches", value: 5 },
-    { label: "inches - cm", value: 6 },
-]
-
-
 const Converter = () => {
 
-    const [option, setOption] = useState(options[0]);
+    const [option, setOption] = useState("km - miles");
+    const [num, setNum] = useState(0);
 
-    const birthday = () => {
-        if (Option == "km - milles") {
+    const changeUnits = (e) => {
+        setOption(e.target.value)
+    }
 
+    //Revierte los tipos de unidades a convertir
+    const revertUnits = () => {
+        switch (option) {
+            case "km - miles":
+                setOption("miles - km")
+                break;
+            case "miles - km":
+                setOption("km - miles")
+                break;
+            case "feet - m":
+                setOption("m - Feet")
+                break;
+            case "m - Feet":
+                setOption("feet - m")
+                break;
+            case "cm - inches":
+                setOption("inches - cm")
+                break;
+            case "inches - cm":
+                setOption("cm - inches")
+                break;
+            default:
+                break;
         }
+    }
+
+    //Calcula la conversion de longitud
+    const calcUnits = (e) => {
+        let number = e.target.value;
+        let result;
+        switch (option) {
+            case "km - miles":
+                result = Math.round((number / 1.609) * 100) / 100
+                break;
+            case "miles - km":
+                result = Math.round((number * 1.609) * 100) / 100
+                break;
+            case "feet - m":
+                result = Math.round((number / 3.281) * 100) / 100
+                break;
+            case "m - Feet":
+                result = Math.round((number * 3.281) * 100) / 100
+                break;
+            case "cm - inches":
+                result = Math.round((number / 2.54) * 100) / 100
+                break;
+            case "inches - cm":
+                result = Math.round((number * 2.54) * 100) / 100
+                break;
+            default:
+                break;
+        }
+        setNum(result);
     }
 
     return (
         <div className='container'>
             <p>convert</p>
             <div>
-                <select onChange={birthday}>
-                    <option value={options[0].value}>{options[0].label}</option>
-                    <option value={options[1].value}>{options[1].label}</option>
-                    <option value={options[2].value}>{options[2].label}</option>
-                    <option value={options[3].value}>{options[3].label}</option>
-                    <option value={options[4].value}>{options[4].label}</option>
-                    <option value={options[5].value}>{options[5].label}</option>
+                <select value={option} onChange={changeUnits}>
+                    <option>km - miles</option>
+                    <option>miles - km</option>
+                    <option>feet - m</option>
+                    <option>m - Feet</option>
+                    <option>cm - inches</option>
+                    <option>inches - cm</option>
                 </select>
-                <button><img src='../../../public/logo192.png' /></button>
-                <input></input>
+                <button onClick={revertUnits}><img src='../../../public/logo192.png' /></button>
+                <input onChange={calcUnits}></input>
             </div>
             <div>
                 <button></button>
-                <p></p>
+                <p>{num}</p>
             </div>
         </div >
     );
