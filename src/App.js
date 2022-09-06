@@ -1,14 +1,12 @@
 import './App.css';
-import Topbar from './components/pure/topbar';
-import Converter from './components/pure/converter';
+import Topbar from './components/topbar';
+import Converter from './components/converter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Topbar />
-        <Converter />
-      </header>
+      <Topbar className="topbar" />
+      <Converter className="converter" />
     </div>
   );
 }

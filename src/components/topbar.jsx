@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/topbar.css'
+import './styles/topbar.css'
 
 const Topbar = () => {
     return (
         <div className='topbar'>
-            <img className='icon-logo' src='../../../public/Icon.svg' alt='' />
+            <div className='icon-logo'></div>
             <p className='text-logo'>unit converter</p>
         </div>
     );

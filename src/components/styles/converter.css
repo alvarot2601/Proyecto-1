@@ -1,0 +1,133 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #2E0039;
+    height: fit-content;
+    width: 50%;
+    padding: 30px;
+    border-radius: 21px;
+}
+
+.title{
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.left button{
+    width: 23px;
+    margin-left: 10px;
+    background-color: transparent;
+    border-style: none;
+    background-image: url("../../../public/arrows.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.options{
+    width: 80%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom-style:double;
+    border-color: white;
+    color: white;
+}
+.options option{
+    background-color: #2E0039;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.right input{
+    width: 80%;
+    margin-left: 20px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom-style: double;
+    border-color: white;
+    color: white;
+    align-content:flex-end;
+    text-align: right;
+}
+
+.right p{
+color: white;
+align-self: center;
+margin-left: 5px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom button{
+    margin-top: 20px;
+    width: 23px;
+    background-color: transparent;
+    border-style: none;
+    background-image: url("../../../public/favourite.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.result{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.result p{
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+.saves{
+    display: grid;
+}
+
+@media(max-width: 450px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .right{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .right input{
+        margin-left: 0px;
+        height: 30px;
+    }
+
+    .bottom{
+        margin-top: 20%;
+    }
+}
