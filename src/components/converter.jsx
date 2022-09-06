@@ -14,6 +14,7 @@ const Converter = () => {
     const [unit1, setUnit1] = useState(unit[0])
     const [unit2, setUnit2] = useState(unit[1])
 
+    //Cambia el tipo de unidades al elegir entre las diferentes funciones
     const changeUnits = (e) => {
         setOption(e.target.value)
 
@@ -47,7 +48,7 @@ const Converter = () => {
         }
     }
 
-    //Revierte los tipos de unidades a convertir
+    //Voltea los tipos de unidades a convertir y los valores que hay en cada campo
     const revertUnits = () => {
         switch (option) {
             case units[0]:
