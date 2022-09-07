@@ -1,4 +1,4 @@
-# Color palette generator
+# Unit converter
 
 Web app para la primera prueba tecnica de Oxygen.
 
@@ -10,7 +10,7 @@ Node version: 18.8.0
 
 ## Creación del proyecto
 
-Proyecto creado con las librerias create-react-app y react-color
+Proyecto creado con la libreria create-react-app
 
 ```Bash
     npx create-react-app nombreproyecto
