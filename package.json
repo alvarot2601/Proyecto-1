@@ -1,16 +1,6 @@
-Add below line to the top of everything in file
-"homepage": "https://alvarot2601.github.io/Proyecto-1/"
-Add below things to the scripts in the file
-
-"scripts": {
-  //...
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
-
-
 {
   "name": "unitconverter",
+  "homepage": "https://alvarot2601.github.io/Proyecto-1/",
   "version": "0.1.0",
   "private": false,
   "homepage": "https://JoseFerAlvarez.github.io/unitconverter",
